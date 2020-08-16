@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EnR Photography</title>
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/d9a8de9e4b.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+			 
+
+        	/*Navbar css*/
+        	  .navbar-nav a
+              {
+                font-family: poppins;
+                font-size: 18px;
+              }
+
+              .navbar-light .navbar-brand
+              {
+                color:#fff;
+                font-size: 25px;
+                font-weight: bold;
+                letter-spacing: 2px;
+              }
+
+              .navbar
+              {
+                background: rgba(0, 0, 0, .24);
+              }
+
+               .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link 
+               {
+                  color:  #fff ;
+               }
+               .navbar-light .navbar-nav .nav-link
+               {
+                color:  #fff;
+               }
+
+               .navbar-nav
+               {
+                text-align: center;
+               }
+               .navbar-link
+               {
+                padding:.2rem 1rem;
+               }
+
+              .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover
+               {
+                color: #f7aa1a  !important;
+               }
+              
+             
+
+              @media only screen and (max-width: 767px)
+              {
+                .navbar-nav.ml-auto
+                {
+                  background: rgba(0,0,0,0.5);
+                }
+                .navbar-toggler
+                {
+                  padding:1px 5px;
+                  font-size: 18px;
+                  line-height: 0.3;
+                  background: #fff;
+                }
+              }
+
+              	
+    			/*social links css*/
+    			.icons
+                  {
+                    
+                    position: fixed;
+                    top:30%;
+                    left:0%;
+                    width:200px;
+                    display:flex;
+                    flex-direction: column;
+                  }
+
+
+                  .icons a
+                  {
+                    text-decoration: none;
+                    
+                    padding:10px;
+                    font-size: 22px;
+                    font-family: 'Oswald', sans-serif;
+                    margin:2px;
+                    text-align: right;
+                    border-radius: 0px 50px 50px 0px;
+                    transform: translate(-150px, 0px);
+                    transition: all 0.5s;
+                  
+                  }
+
+                  .icons a:hover
+                  {
+                    transform: translate(0px, 0px);
+                  }
+
+                  .icons a i
+                  {
+                    margin-left: 25px;
+                    background-color: white;
+                    height: 30px;
+                    width:30px;
+                    color:black;
+                    text-align: center;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    transition: all 0.5s;
+                  }
+
+                  .icons a:hover i
+                  {
+                    transform: rotate(360deg);
+                  }
+                  .icons a i.fa-facebook-f
+                  {
+                    color:#2C80D3;
+                  }
+                  .icons a i.fa-youtube
+                  {
+                    color:#fa0910;
+                  }
+
+
+                  .Facebook
+                  {
+                    background-color: #2C80D3;
+                    color:white;
+                  }
+
+                  .Youtube
+                  {
+                    background-color: #fa0910;
+                    color:white;
+                  }
+
+                  .Instagram
+                  {
+                    background-color: #3f729b ;
+                    color:white;
+                  }
+
+                 
+
+                 /*footer-css*/
+
+    			       .footer-top
+                  {
+                    background: #111;
+                    padding:80px 0;
+                    color:white;
+                  }
+
+                  .segment-one h3
+                  {
+                    font-family: Courgette;
+                    color:#fff;
+                    letter-spacing: 3px;
+                    margin:10px 0;
+
+                  }
+
+                  .segment-two h3
+                  {
+                    font-family: poppins;
+                    margin:10px 0;
+                  }
+
+                  .segment-two h3:before
+                  {
+                    content: '|';
+                    color:#c65039;
+                    padding-right: 10px;
+                  }
+
+                  .segment-two ul
+                  {
+                    margin:0;
+                    padding: 0;
+                    list-style: none;
+                  }
+
+                  .segment-two ul li
+                  {
+                    border-bottom: 1px solid rgba(255,255,255,0.3);
+                    line-height: 40px;
+                  }
+
+                  .segment-two ul li a
+                  {
+                    color:#999;
+                    text-decoration: none;
+                  }
+
+                  .segment-two ul li a:hover
+                  {
+                    color: white;
+                    
+                  }
+
+                  .segment-three h3
+                  {
+                    font-family: poppins;
+                    margin:10px 0;
+                  }
+
+                  .segment-three h3:before
+                  {
+                    content: '|';
+                    color:#c65039;
+                    padding-right: 10px;
+                  }
+
+                  .segment-three ul li
+                  {
+                    
+                    line-height: 40px
+                  }
+
+                  .footer-bottom-text
+                  {
+                    text-align: center;
+                    background: #000;
+                    line-height: 75px;
+                    color:white;
+                  }
+
+                  /* Responsive css for footer section*/
+                  @media only screen and (min-width: 768px) and (max-width: 991px)
+                  {
+                    .md-mb-30
+                    {
+                      margin-bottom: 30px;
+                    }
+                  }
+
+                  @media only screen and (max-width: 767px)
+                  {
+                    .sm-mb-30
+                    {
+                      margin-bottom: 30px;
+                    }
+                    .footer-top
+                    {
+                      padding:50px 0;
+                    }
+                  }
+                  
+
+                  
+
+                  .title h2 
+                  {
+                    font-weight: 800;
+                    color: #ff3061;
+                    font-size: 36px;
+                    margin: 10px 0 30px;
+                  }
+                  .title h4 
+                  {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #555;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    margin-top: -18px;
+                    margin-bottom: 8px;
+                    line-height: 26px;
+                    text-align: center;
+                  }
+				
+				/*about us*/
+				*{
+					margin: 0;
+					padding: 0;
+					font-family: "Open Sans",sans-serif;
+					box-sizing: border-box;
+				}
+
+				body
+				{
+					min-height: 100vh;
+				
+					align-items: center;
+					justify-content: center;
+					background-color: #f1f1f1;
+				}
+
+				.about-section
+				{
+					background:url(index-images/index-carousel-03.jpg) no-repeat left; 
+					background-size: 65%;
+					background-color: #fdfdfd;
+					overflow: hidden;
+
+					padding: 160px 0;
+				}
+
+				.inner-container
+				{
+					width:55%;
+
+					float: right;
+					background-color: #fdfdfd;
+					
+					padding: 50px;
+				}
+
+				.inner-container h1
+				{
+          margin-top: 20px;
+					margin-bottom: 30px;
+					font-size: 30px;
+					font-weight: 900;
+				}
+
+				.text
+				{
+					font-size: 13px;
+					color: #000000;
+					line-height: 30px;
+					text-align: justify;
+					margin-bottom: 40px;
+				}
+				
+				@media screen and (max-width: 1200px) 
+				{
+					.inner-container{
+						padding: 80px;
+					}
+					
+				}
+
+				@media screen and (max-width: 1000px) 
+				{
+					.about-section
+					{
+						background-size: 100%;
+						padding: 100px 40px;
+					}
+
+					.inner-container{
+						width: 100%;
+					}
+					
+				}
+
+
+				@media screen and (max-width: 600px) 
+				{
+					.about-section
+					{
+						padding: 0;
+					}
+
+					.inner-container{
+						padding: 60px;
+					}
+					
+				}
+
+
+
+
+
+                 
+
+    </style>
+</head>
+<body>
+	<!-- <navigation Bar> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid ">
+         	<div class="icons">
+            <a href="https://www.facebook.com/EnRConsultancyServices/" target="_blank" class="Facebook">Facebook <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCfK_1VsaSyxQwcFhacPE8tw" target="_blank" class="Youtube">Youtube <i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/enrconsultancyservices/" target="_blank" class="Instagram">Instagram <i class="fab fa-instagram"></i></a>
+          </div>
+
+          <a class="navbar-brand" ><img src="logo.jpg" alt=""> EnR Photography</a>
+
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	          <ul class="navbar-nav ml-auto">
+	            <li class="nav-item ">
+	              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+	            </li>
+	            <li class="nav-item dropdown active">
+	              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                Services
+	              </a>
+	              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	          
+	                <a class="dropdown-item" href="wedding-photography.html">Wedding Photography</a>
+	                <a class="dropdown-item" href="engagement-photography.html">Engagement Photography</a>
+	                <a class="dropdown-item" href="prewedding-photography.html">Pre-Wedding Photography</a>
+	                <a class="dropdown-item" href="maternity-shoot.html">Maternity Shoot</a>
+	                <a class="dropdown-item" href="babyshoot.html">Baby Shoot</a>
+	              </div>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">About</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#Contact">Contact</a>
+	            </li>
+	          </ul>
+	        </div>
+		</div>
+	</nav> 
+
+<!-- About us Section -->
+<div class="about-section">
+	<div class="inner-container">
+		<h1>About us</h1>
+		<p class="text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam dolor repudiandae quibusdam, ipsa, rem quisquam? Ullam ut culpa veniam tempora dignissimos saepe officiis non architecto sapiente in, maiores odio rerum!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, inventore voluptates quisquam laboriosam praesentium tempore blanditiis est reprehenderit eaque quas explicabo sit maiores, cum ipsam commodi sed, nulla voluptatem. Vitae!
+		</p>
+
+	</div>
+</div>
+
+
+
+
+
+
+<!-- footer section -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+          <h3>EnR Photography</h3>
+          <p>We Engage And You Reap</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="wedding-photography.html">Wedding</a></li>
+            <li><a href="engagement-photography.html">Engagement</a></li>
+            <li><a href="prewedding-photography.html">Pre-Wedding</a></li>
+            <li><a href="babyshoot.html">Baby Shoot</a></li>
+            <li><a href="maternity-shoot.html">Maternity Shoot</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-three">
+          <h3 id="Contact">Contact</h3>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> 92 Boroughbridge Road, BIRMINGHAM-B41LQ ,United Kingdom.</li>
+            <li><i class="fas fa-envelope-square"></i> engagenreap@gmail.com</li>
+            <li><i class="fas fa-phone-square-alt"></i> +078 8992 0492</li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom-text">All Right reserved by &copy;EnR Photography 2020</p>
+</footer>
+
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	
+</body>
+</html>

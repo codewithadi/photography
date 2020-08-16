@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EnR Photography</title>
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/d9a8de9e4b.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+			 
+
+        	/*Navbar css*/
+        	  .navbar-nav a
+              {
+                font-family: poppins;
+                font-size: 18px;
+              }
+
+              .navbar-light .navbar-brand
+              {
+                color:#fff;
+                font-size: 25px;
+                font-weight: bold;
+                letter-spacing: 2px;
+              }
+
+              .navbar
+              {
+                background: rgba(0, 0, 0, .24);
+              }
+
+               .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link 
+               {
+                  color:  #fff ;
+               }
+               .navbar-light .navbar-nav .nav-link
+               {
+                color:  #fff;
+               }
+
+               .navbar-nav
+               {
+                text-align: center;
+               }
+               .navbar-link
+               {
+                padding:.2rem 1rem;
+               }
+
+              .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover
+               {
+                color: #f7aa1a  !important;
+               }
+              
+             
+
+              @media only screen and (max-width: 767px)
+              {
+                .navbar-nav.ml-auto
+                {
+                  background: rgba(0,0,0,0.5);
+                }
+                .navbar-toggler
+                {
+                  padding:1px 5px;
+                  font-size: 18px;
+                  line-height: 0.3;
+                  background: #fff;
+                }
+              }
+
+              	
+    			/*social links css*/
+    			.icons
+                  {
+                    
+                    position: fixed;
+                    top:30%;
+                    left:0%;
+                    width:200px;
+                    display:flex;
+                    flex-direction: column;
+                  }
+
+
+                  .icons a
+                  {
+                    text-decoration: none;
+                    
+                    padding:10px;
+                    font-size: 22px;
+                    font-family: 'Oswald', sans-serif;
+                    margin:2px;
+                    text-align: right;
+                    border-radius: 0px 50px 50px 0px;
+                    transform: translate(-150px, 0px);
+                    transition: all 0.5s;
+                  
+                  }
+
+                  .icons a:hover
+                  {
+                    transform: translate(0px, 0px);
+                  }
+
+                  .icons a i
+                  {
+                    margin-left: 25px;
+                    background-color: white;
+                    height: 30px;
+                    width:30px;
+                    color:black;
+                    text-align: center;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    transition: all 0.5s;
+                  }
+
+                  .icons a:hover i
+                  {
+                    transform: rotate(360deg);
+                  }
+                  .icons a i.fa-facebook-f
+                  {
+                    color:#2C80D3;
+                  }
+                  .icons a i.fa-youtube
+                  {
+                    color:#fa0910;
+                  }
+
+
+                  .Facebook
+                  {
+                    background-color: #2C80D3;
+                    color:white;
+                  }
+
+                  .Youtube
+                  {
+                    background-color: #fa0910;
+                    color:white;
+                  }
+
+                  .Instagram
+                  {
+                    background-color: #3f729b ;
+                    color:white;
+                  }
+
+                 
+
+                 /*footer-css*/
+
+    			       .footer-top
+                  {
+                    background: #111;
+                    padding:80px 0;
+                    color:white;
+                  }
+
+                  .segment-one h3
+                  {
+                    font-family: Courgette;
+                    color:#fff;
+                    letter-spacing: 3px;
+                    margin:10px 0;
+
+                  }
+
+                  .segment-two h3
+                  {
+                    font-family: poppins;
+                    margin:10px 0;
+                  }
+
+                  .segment-two h3:before
+                  {
+                    content: '|';
+                    color:#c65039;
+                    padding-right: 10px;
+                  }
+
+                  .segment-two ul
+                  {
+                    margin:0;
+                    padding: 0;
+                    list-style: none;
+                  }
+
+                  .segment-two ul li
+                  {
+                    border-bottom: 1px solid rgba(255,255,255,0.3);
+                    line-height: 40px;
+                  }
+
+                  .segment-two ul li a
+                  {
+                    color:#999;
+                    text-decoration: none;
+                  }
+
+                  .segment-two ul li a:hover
+                  {
+                    color: white;
+                    
+                  }
+
+                  .segment-three h3
+                  {
+                    font-family: poppins;
+                    margin:10px 0;
+                  }
+
+                  .segment-three h3:before
+                  {
+                    content: '|';
+                    color:#c65039;
+                    padding-right: 10px;
+                  }
+
+                  .segment-three ul li
+                  {
+                    
+                    line-height: 40px
+                  }
+
+                  .footer-bottom-text
+                  {
+                    text-align: center;
+                    background: #000;
+                    line-height: 75px;
+                    color:white;
+                  }
+
+                  /* Responsive css for footer section*/
+                  @media only screen and (min-width: 768px) and (max-width: 991px)
+                  {
+                    .md-mb-30
+                    {
+                      margin-bottom: 30px;
+                    }
+                  }
+
+                  @media only screen and (max-width: 767px)
+                  {
+                    .sm-mb-30
+                    {
+                      margin-bottom: 30px;
+                    }
+                    .footer-top
+                    {
+                      padding:50px 0;
+                    }
+                  }
+                  
+
+                  
+
+                  .title h2 
+                  {
+                    font-weight: 800;
+                    color: #ff3061;
+                    font-size: 36px;
+                    margin: 10px 0 30px;
+                  }
+                  .title h4 
+                  {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #555;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    margin-top: -18px;
+                    margin-bottom: 8px;
+                    line-height: 26px;
+                    text-align: center;
+                  }
+
+
+                  /*gallery css*/
+                  .container.gallery-container 
+                  {
+                    background-color: #fff;
+                    color: #35373a;
+                    min-height: 100vh;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+                  }
+
+                  .gallery-container h1 
+                  {
+                      text-align: center;
+                      margin-top: 70px;
+                      font-family: 'Droid Sans', sans-serif;
+                      font-weight: bold;
+                  }
+
+                  .gallery-container p.page-description 
+                  {
+                      text-align: center;
+                      max-width: 800px;
+                      margin: 25px auto;
+                      color: #888;
+                      font-size: 18px;
+                  }
+
+                  .tz-gallery 
+                  {
+                      padding: 40px;
+                  }
+
+                  .tz-gallery .lightbox img 
+                  {
+                      width: 100%;
+                      margin-bottom: 30px;
+                      transition: 0.2s ease-in-out;
+                      box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+                  }
+
+
+                  .tz-gallery .lightbox img:hover 
+                  {
+                      transform: scale(1.05);
+                      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+                  }
+
+                  .tz-gallery img 
+                  {
+                      border-radius: 4px;
+                  }
+
+                  .baguetteBox-button 
+                  {
+                      background-color: transparent !important;
+                  }
+
+
+            @media(max-width: 768px) {
+                body {
+                    padding: 0;
+                }
+
+                .container.gallery-container {
+                    border-radius: 0;
+                }
+              }
+
+    </style>
+
+</head>
+<body>
+
+	<!-- <navigation Bar> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid ">
+         	<div class="icons">
+            <a href="https://www.facebook.com/EnRConsultancyServices/" target="_blank" class="Facebook">Facebook <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCfK_1VsaSyxQwcFhacPE8tw" target="_blank" class="Youtube">Youtube <i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/enrconsultancyservices/" target="_blank" class="Instagram">Instagram <i class="fab fa-instagram"></i></a>
+          </div>
+
+          <a class="navbar-brand" ><img src="logo.jpg" alt=""> EnR Photography</a>
+
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	          <ul class="navbar-nav ml-auto">
+	            <li class="nav-item ">
+	              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+	            </li>
+	            <li class="nav-item dropdown active">
+	              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                Services
+	              </a>
+	              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	          
+	                <a class="dropdown-item" href="wedding-photography.html">Wedding Photography</a>
+	                <a class="dropdown-item" href="engagement-photography.html">Engagement Photography</a>
+	                <a class="dropdown-item" href="prewedding-photography.html">Pre-Wedding Photography</a>
+	                <a class="dropdown-item" href="#">Maternity Shoot</a>
+	                <a class="dropdown-item" href="babyshoot.html">Baby Shoot</a>
+	              </div>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="about.html">About</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#Contact">Contact</a>
+	            </li>
+	          </ul>
+	        </div>
+		</div>
+
+	   
+	</nav> 
+
+
+	<!-- Banner image section -->
+	<section class="innerBanner position-sticky">
+		<img src="maternity-images/maternity-banner-image.jpg" class="img-fluid">
+	</section>
+
+     <!-- text after banner -->
+		 <div class="container mt-5 ">
+		      <div class="title">
+		        <img src="design.png" class="rounded mx-auto d-block"  alt="...">
+		        <h2 style="font-weight: 700; font-size: 40px; color: #ff3061; text-align: center; font-family:Nunito">Maternity Shoot</h2>
+		        <h5 style="text-align: center">There is no better feeling than the movement of life inside you.</h5>
+		          <p style="font-size: 20px; color: #757575; line-height: 28px; text-align: center;">Every couple would obviously like to make sure that after spending enough money on pregnancy photography, they get the desired result. The expectation is only to leave smiling faces at the end when looking at the photographs of the times of pregnancy. Going for Pregnancy Photoshoot by EnR Photography in United Kingdom is a way of celebrating pregnancy. </p>
+		      </div>
+		 </div>
+
+      <!-- <maternity photographer> -->
+		    <div class="container pt-5">
+		      <div class="row sonu featurette d-flex justify-content-center align-items-center">
+		        <div class="col-md-7">
+		            <h2 style="font-family:cursive;font-style: italic;text-align:center">Let's Plan Your Big Day!<span class="text-muted"><br>Capture The Precious Moments Of Your Pregnancy </span></h2>
+		          <p class="lead text-center">Pregnancy is perhaps one of the most special times in your life. Our mission is to capture your inner strength and beauty as you reach your final weeks of pregnancy..A pregnancy shoot can be a confidence building experience and will leave you feeling radiant and beautiful.Choosing the right photographer is important as he is the one to add glory to your moments.We encourage every pregnant women to consider maternity photography. It is a time to celebrate the gift of new life.   </p>
+		        </div>
+		        <div class="col-md-5">
+		          <img src="index-images/maternityshoot-resized.jpg" alt="">
+		        </div>
+		      </div>
+		    </div>
+
+ 	<!-- Gallery -->
+ <div class="container-fluid gallery-container pt-5">
+
+     <img src="design.png" class="rounded mx-auto d-block"  alt="...">
+        <h2 style="font-weight: 700; font-size: 40px; color: #ff3061; text-align: center; font-family:Nunito">Maternity Photoshoot Showcase</h2>
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-01.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-01.jpg" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-02.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-02.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-03.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-03.jpg" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-05.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-05.jpg" alt="Coast">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-06.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-06.jpg" alt="Rails">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-07.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-07.jpg" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-04.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-04.jpg" alt="Rocks">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-08.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-08.jpg" alt="Benches">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="maternity-images/maternity-image-09.jpg" target="_blank">
+                    <img src="maternity-images/maternity-image-09.jpg" alt="Sky">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+  <!-- footer section -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+          <h3>EnR Photography</h3>
+          <p>We Engage And You Reap</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="wedding-photography.html">Wedding</a></li>
+            <li><a href="engagement-photography.html">Engagement</a></li>
+            <li><a href="prewedding-photography.html">Pre-Wedding</a></li>
+            <li><a href="babyshoot.html">Baby Shoot</a></li>
+            <li><a href="#">Maternity Shoot</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 segment-three">
+          <h3 id="Contact">Contact</h3>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> 92 Boroughbridge Road, BIRMINGHAM-B41LQ ,United Kingdom.</li>
+            <li><i class="fas fa-envelope-square"></i> engagenreap@gmail.com</li>
+            <li><i class="fas fa-phone-square-alt"></i> +078 8992 0492</li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom-text">All Right reserved by &copy;EnR Photography 2020</p>
+</footer>
+
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
